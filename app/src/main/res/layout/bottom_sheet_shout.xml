@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    android:layout_width="350dp"
+    android:layout_height="320dp">
+
+    <ProgressBar
+        android:id="@+id/loader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_centerHorizontal="true"
+        android:indeterminate="true" />
+
+    <TextView
+        android:id="@+id/textview2"
+        android:layout_below="@+id/loader"
+        android:layout_marginTop="14dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#77000000"
+        android:text="Retrieving information"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:id="@+id/details"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textview"
+            android:layout_width="wrap_content"
+            android:text="Result"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:textSize="14dp"
+            android:textColor="#000"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="60dp"
+            android:layout_height="1px"
+            android:layout_marginTop="2dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/textview"
+            android:background="#88000000"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_below="@+id/textview">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="250dp"
+            android:layout_below="@+id/recyclerview"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:background="@color/kst_red"
+            android:text="Save"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
